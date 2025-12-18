@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanha Medical Hall | Opening Soon</title>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+    body{background:#f4fdf7;color:#333}
+    section{padding:50px 20px;text-align:center}
+    h2{margin-bottom:20px;color:#1e8449}
+
+    /* HERO */
+    .hero{
+      background:linear-gradient(to right,#2ecc71,#27ae60);
+      color:#fff;
+      padding:80px 20px;
+      position:relative
+    }
+    .hero h1{font-size:2.5rem;margin-bottom:10px}
+
+    #langBtn{
+      position:absolute;top:20px;right:20px;
+      background:#fff;color:#27ae60;
+      border:none;padding:8px 16px;
+      border-radius:20px;font-weight:bold;cursor:pointer
+    }
+
+    /* COUNTDOWN */
+    .countdown{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin-top:20px}
+    .time-box{
+      background:#fff;color:#27ae60;
+      padding:15px;border-radius:10px;min-width:90px
+    }
+
+    /* GRID */
+    .service-box{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;max-width:1000px;margin:auto
+    }
+    .card{
+      background:#fff;padding:20px;border-radius:12px;
+      box-shadow:0 2px 8px rgba(0,0,0,.1);font-weight:bold
+    }
+
+    /* OFFER */
+    .offer{
+      background:linear-gradient(135deg,#fff7e6,#fff);
+      border-top:3px dashed #e67e22;
+      border-bottom:3px dashed #e67e22
+    }
+    .offer .card{border-left:4px solid #27ae60}
+    .offer-note{
+      margin-top:20px;background:#ffecec;
+      display:inline-block;padding:10px 20px;
+      border-radius:20px;color:#c0392b;font-weight:bold
+    }
+
+    /* CONTACT */
+    .contact{background:#eafaf1}
+    .owner-box{
+      background:#fff;display:inline-block;
+      padding:15px 25px;border-radius:12px;
+      box-shadow:0 2px 8px rgba(0,0,0,.1);
+      margin-bottom:20px
+    }
+    .contact a{
+      display:inline-block;margin:10px;
+      background:#27ae60;color:#fff;
+      padding:10px 18px;border-radius:5px;
+      text-decoration:none
+    }
+
+    footer{background:#1e8449;color:#fff;padding:15px;text-align:center}
+
+    /* POPUP */
+    #welcomePopup{
+      position:fixed;top:50%;left:50%;
+      transform:translate(-50%,-50%);
+      background:#fff;padding:30px 40px;
+      border-radius:15px;text-align:center;
+      box-shadow:0 10px 40px rgba(0,0,0,.3);
+      z-index:9999;animation:popIn .8s ease
+    }
+    #welcomePopup h2{color:#27ae60;margin-bottom:10px}
+    @keyframes popIn{
+      from{transform:translate(-50%,-60%) scale(.5);opacity:0}
+      to{transform:translate(-50%,-50%) scale(1);opacity:1}
+    }
+
+    #confettiCanvas{
+      position:fixed;top:0;left:0;
+      width:100%;height:100%;
+      pointer-events:none;z-index:9998
+    }
+
+    @media(max-width:600px){.hero h1{font-size:2rem}}
+  </style>
+</head>
+
+<body>
+
+<!-- 🎉 POPUP -->
+<div id="welcomePopup">
+  <h2 id="welcomeTitle">🎉 स्वागत है 🎉</h2>
+  <p><strong id="welcomeName">कान्हा मेडिकल हॉल</strong></p>
+  <p id="welcomeMsg" style="margin:10px 0;color:#27ae60;font-weight:bold">
+    5 जनवरी को हमारे<br>
+    <span style="color:#c0392b">भव्य उद्घाटन समारोह 🎊</span><br>
+    में आपका हार्दिक स्वागत है
+  </p>
+  <small id="welcomeTagline">आपकी भरोसेमंद मेडिकल दुकान</small>
+</div>
+<canvas id="confettiCanvas"></canvas>
+
+<!-- HERO -->
+<section class="hero">
+  <button id="langBtn" onclick="toggleLanguage()">English</button>
+  <h1 id="pharmacyName">कान्हा मेडिकल हॉल</h1>
+  <p id="tagline">आपकी भरोसेमंद मेडिकल दुकान</p>
+  <p><strong id="openingText">उद्घाटन तिथि: 01 जनवरी 2026</strong></p>
+
+  <div class="countdown">
+    <div class="time-box"><h3 id="days">0</h3><span>दिन</span></div>
+    <div class="time-box"><h3 id="hours">0</h3><span>घंटे</span></div>
+    <div class="time-box"><h3 id="minutes">0</h3><span>मिनट</span></div>
+    <div class="time-box"><h3 id="seconds">0</h3><span>सेकंड</span></div>
+  </div>
+</section>
+
+<!-- FACILITIES -->
+<section>
+  <h2>💊 हमारी सुविधाएँ</h2>
+  <div class="service-box">
+    <div class="card">सभी प्रकार की दवाइयाँ उपलब्ध</div>
+    <div class="card">प्रिस्क्रिप्शन दवाइयाँ</div>
+    <div class="card">बीपी एवं शुगर जांच</div>
+    <div class="card">आपातकालीन दवाइयाँ</div>
+    <div class="card">होम डिलीवरी (जल्द आ रही है)</div>
+    <div class="card">विश्वसनीय एवं असली उत्पाद</div>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section class="offer">
+  <h2>🎉 उद्घाटन दिवस विशेष मेडिकल कैंप 🎉</h2>
+  <div class="service-box">
+    <div class="card">🩺 BP जांच – निःशुल्क</div>
+    <div class="card">🍬 शुगर जांच – निःशुल्क</div>
+    <div class="card">🦟 मलेरिया जांच</div>
+    <div class="card">🧪 CBC ब्लड टेस्ट – ₹125</div>
+    <div class="card">🧫 विडाल टेस्ट – ₹50</div>
+    <div class="card">🦋 थायरॉयड टेस्ट – ₹200</div>
+  </div>
+  <div class="offer-note">⚠️ यह सुविधा केवल उद्घाटन दिवस पर ही उपलब्ध है</div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <h2>📞 संपर्क करें</h2>
+  <div class="owner-box">
+    <p><strong>मालिक:</strong> नीरज यादव</p>
+    <p><strong>मोबाइल:</strong> 9621104072</p>
+  </div><br>
+  <a href="tel:9621104072">कॉल करें</a>
+  <a href="https://wa.me/919621104072" target="_blank">WhatsApp</a>
+</section>
+
+<footer>© 2026 कान्हा मेडिकल हॉल | सर्वाधिकार सुरक्षित</footer>
+
+<script>
+  /* COUNTDOWN */
+  const openingDate=new Date("January 1, 2026 09:00:00").getTime();
+  setInterval(()=>{
+    const d=openingDate-new Date().getTime();
+    if(d<0)return;
+    days.innerText=Math.floor(d/86400000);
+    hours.innerText=Math.floor((d%86400000)/3600000);
+    minutes.innerText=Math.floor((d%3600000)/60000);
+    seconds.innerText=Math.floor((d%60000)/1000);
+  },1000);
+
+  /* CONFETTI */
+  const c=confettiCanvas,ctx=c.getContext("2d");
+  c.width=innerWidth;c.height=innerHeight;
+  const conf=Array.from({length:150},()=>({
+    x:Math.random()*c.width,y:Math.random()*c.height-c.height,
+    r:Math.random()*6+4,d:Math.random()*10,
+    col:`hsl(${Math.random()*360},100%,50%)`
+  }));
+  (function draw(){
+    ctx.clearRect(0,0,c.width,c.height);
+    conf.forEach(p=>{
+      ctx.fillStyle=p.col;
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fill();
+      p.y+=p.d;if(p.y>c.height)p.y=-10;
+    });
+    requestAnimationFrame(draw);
+  })();
+
+  setTimeout(()=>{
+    welcomePopup.style.display="none";
+    confettiCanvas.style.display="none";
+  },8000);
+</script>
+
+</body>
+</html>
