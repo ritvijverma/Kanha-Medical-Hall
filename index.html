@@ -6,121 +6,256 @@
   <title>Kanha Medical Hall | Opening Soon</title>
 
   <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-    body{background:#f4fdf7;color:#333}
-    section{padding:50px 20px;text-align:center}
-    h2{margin-bottom:20px;color:#1e8449}
-
-    /* HERO */
-    .hero{
-      background:linear-gradient(to right,#2ecc71,#27ae60);
-      color:#fff;
-      padding:80px 20px;
-      position:relative
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:"Segoe UI",Arial,sans-serif;
     }
-    .hero h1{font-size:2.5rem;margin-bottom:10px}
+
+    body{
+      background:#f2fbf6;
+      color:#333;
+      line-height:1.6;
+    }
+
+    section{
+      padding:60px 20px;
+      text-align:center;
+    }
+
+    h2{
+      margin-bottom:25px;
+      color:#1e8449;
+      font-size:1.9rem;
+    }
+
+    /* ================= HERO ================= */
+    .hero{
+      background:linear-gradient(135deg,#27ae60,#2ecc71);
+      color:#fff;
+      padding:90px 20px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero h1{
+      font-size:2.7rem;
+      margin-bottom:10px;
+    }
+
+    .hero p{
+      font-size:1.1rem;
+      margin-bottom:8px;
+    }
 
     #langBtn{
-      position:absolute;top:20px;right:20px;
-      background:#fff;color:#27ae60;
-      border:none;padding:8px 16px;
-      border-radius:20px;font-weight:bold;cursor:pointer
+      position:absolute;
+      top:20px;
+      right:20px;
+      background:#fff;
+      color:#27ae60;
+      border:none;
+      padding:8px 18px;
+      border-radius:30px;
+      font-weight:bold;
+      cursor:pointer;
+      box-shadow:0 4px 10px rgba(0,0,0,.2);
     }
 
-    /* COUNTDOWN */
-    .countdown{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin-top:20px}
+    /* ================= COUNTDOWN ================= */
+    .countdown{
+      display:flex;
+      justify-content:center;
+      gap:15px;
+      flex-wrap:wrap;
+      margin-top:30px;
+    }
+
     .time-box{
-      background:#fff;color:#27ae60;
-      padding:15px;border-radius:10px;min-width:90px
+      background:#fff;
+      color:#27ae60;
+      padding:18px;
+      border-radius:16px;
+      min-width:95px;
+      box-shadow:0 8px 20px rgba(0,0,0,.15);
     }
 
-    /* GRID */
+    .time-box h3{
+      font-size:1.8rem;
+    }
+
+    /* ================= GRID ================= */
     .service-box{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:20px;max-width:1000px;margin:auto
+      gap:22px;
+      max-width:1100px;
+      margin:auto;
     }
+
     .card{
-      background:#fff;padding:20px;border-radius:12px;
-      box-shadow:0 2px 8px rgba(0,0,0,.1);font-weight:bold
+      background:#fff;
+      padding:22px;
+      border-radius:18px;
+      box-shadow:0 10px 25px rgba(0,0,0,.1);
+      font-weight:bold;
+      transition:.3s;
     }
 
-    /* OFFER */
+    .card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 18px 35px rgba(0,0,0,.15);
+    }
+
+    /* ================= OFFER ================= */
     .offer{
-      background:linear-gradient(135deg,#fff7e6,#fff);
-      border-top:3px dashed #e67e22;
-      border-bottom:3px dashed #e67e22
+      background:linear-gradient(135deg,#fff7e6,#ffffff);
+      border-top:4px dashed #e67e22;
+      border-bottom:4px dashed #e67e22;
     }
-    .offer .card{border-left:4px solid #27ae60}
+
     .offer-note{
-      margin-top:20px;background:#ffecec;
-      display:inline-block;padding:10px 20px;
-      border-radius:20px;color:#c0392b;font-weight:bold
+      margin-top:25px;
+      background:#ffecec;
+      display:inline-block;
+      padding:12px 26px;
+      border-radius:30px;
+      color:#c0392b;
+      font-weight:bold;
+      box-shadow:0 5px 15px rgba(0,0,0,.1);
     }
 
-    /* CONTACT */
-    .contact{background:#eafaf1}
+    /* ================= CONTACT ================= */
+    .contact{
+      background:#eafaf1;
+    }
+
     .owner-box{
-      background:#fff;display:inline-block;
-      padding:15px 25px;border-radius:12px;
-      box-shadow:0 2px 8px rgba(0,0,0,.1);
-      margin-bottom:20px
+      background:linear-gradient(135deg,#ffffff,#f3fff8);
+      display:inline-block;
+      padding:18px 35px;
+      border-radius:18px;
+      box-shadow:0 8px 20px rgba(0,0,0,.12);
+      margin-bottom:25px;
+      border-left:6px solid #27ae60;
     }
+
     .contact a{
-      display:inline-block;margin:10px;
-      background:#27ae60;color:#fff;
-      padding:10px 18px;border-radius:5px;
-      text-decoration:none
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin:10px;
+      background:linear-gradient(135deg,#27ae60,#2ecc71);
+      color:#fff;
+      padding:14px 26px;
+      border-radius:35px;
+      font-weight:bold;
+      text-decoration:none;
+      box-shadow:0 6px 18px rgba(39,174,96,.35);
+      transition:.3s;
     }
 
-    footer{background:#1e8449;color:#fff;padding:15px;text-align:center}
+    .contact a:hover{
+      transform:translateY(-4px) scale(1.04);
+      box-shadow:0 12px 28px rgba(39,174,96,.5);
+    }
 
-    /* POPUP */
+    /* ================= MAP ================= */
+    .map-card{
+      max-width:1100px;
+      margin:40px auto 0;
+      background:#fff;
+      border-radius:20px;
+      box-shadow:0 12px 35px rgba(0,0,0,.15);
+      overflow:hidden;
+    }
+
+    .map-card h3{
+      background:linear-gradient(to right,#27ae60,#2ecc71);
+      color:#fff;
+      padding:18px;
+      text-align:center;
+      font-size:1.3rem;
+    }
+
+    .map-card iframe{
+      width:100%;
+      height:340px;
+      border:0;
+    }
+
+    /* ================= FOOTER ================= */
+    footer{
+      background:#1e8449;
+      color:#fff;
+      padding:18px;
+      text-align:center;
+      font-size:.95rem;
+    }
+
+    /* ================= POPUP ================= */
     #welcomePopup{
-      position:fixed;top:50%;left:50%;
+      position:fixed;
+      top:50%;
+      left:50%;
       transform:translate(-50%,-50%);
-      background:#fff;padding:30px 40px;
-      border-radius:15px;text-align:center;
-      box-shadow:0 10px 40px rgba(0,0,0,.3);
-      z-index:9999;animation:popIn .8s ease
+      background:#fff;
+      padding:35px 45px;
+      border-radius:20px;
+      text-align:center;
+      box-shadow:0 15px 45px rgba(0,0,0,.35);
+      z-index:9999;
+      animation:popIn .8s ease;
     }
-    #welcomePopup h2{color:#27ae60;margin-bottom:10px}
+
+    #welcomePopup h2{
+      color:#27ae60;
+      margin-bottom:12px;
+    }
+
     @keyframes popIn{
       from{transform:translate(-50%,-60%) scale(.5);opacity:0}
       to{transform:translate(-50%,-50%) scale(1);opacity:1}
     }
 
     #confettiCanvas{
-      position:fixed;top:0;left:0;
-      width:100%;height:100%;
-      pointer-events:none;z-index:9998
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      pointer-events:none;
+      z-index:9998;
     }
 
-    @media(max-width:600px){.hero h1{font-size:2rem}}
+    @media(max-width:600px){
+      .hero h1{font-size:2.1rem}
+    }
   </style>
 </head>
 
 <body>
 
-<!-- 🎉 POPUP -->
+<!-- POPUP -->
 <div id="welcomePopup">
-  <h2 id="welcomeTitle">🎉 स्वागत है 🎉</h2>
-  <p><strong id="welcomeName">कान्हा मेडिकल हॉल</strong></p>
-  <p id="welcomeMsg" style="margin:10px 0;color:#27ae60;font-weight:bold">
+  <h2>🎉 स्वागत है 🎉</h2>
+  <p><strong>कान्हा मेडिकल हॉल</strong></p>
+  <p style="margin:12px 0;color:#27ae60;font-weight:bold">
     5 जनवरी को हमारे<br>
     <span style="color:#c0392b">भव्य उद्घाटन समारोह 🎊</span><br>
     में आपका हार्दिक स्वागत है
   </p>
-  <small id="welcomeTagline">आपकी भरोसेमंद मेडिकल दुकान</small>
+  <small>आपकी भरोसेमंद मेडिकल दुकान</small>
 </div>
 <canvas id="confettiCanvas"></canvas>
 
 <!-- HERO -->
 <section class="hero">
-  <button id="langBtn" onclick="toggleLanguage()">English</button>
-  <h1 id="pharmacyName">कान्हा मेडिकल हॉल</h1>
-  <p id="tagline">आपकी भरोसेमंद मेडिकल दुकान</p>
-  <p><strong id="openingText">उद्घाटन तिथि: 05 जनवरी 2026</strong></p>
+  <!-- <button id="langBtn">English</button> -->
+  <h1>कान्हा मेडिकल हॉल</h1>
+  <p>आपकी भरोसेमंद मेडिकल दुकान</p>
+  <p><strong>उद्घाटन तिथि: 05 जनवरी 2026</strong></p>
 
   <div class="countdown">
     <div class="time-box"><h3 id="days">0</h3><span>दिन</span></div>
@@ -157,8 +292,6 @@
   </div>
 </section>
 
-
-
 <!-- CONTACT -->
 <section class="contact">
   <h2>📞 संपर्क करें</h2>
@@ -166,15 +299,29 @@
     <p><strong>मालिक:</strong> नीरज यादव</p>
     <p><strong>मोबाइल:</strong> 9621104072</p>
   </div><br>
-  <a href="tel:9621104072">कॉल करें</a>
-  <a href="https://wa.me/919621104072" target="_blank">WhatsApp</a>
+
+  <a href="tel:9621104072">📞 कॉल करें</a>
+  <a href="https://wa.me/919621104072" target="_blank">💬 WhatsApp</a>
+  <a href="https://www.google.com/maps/place/02,+Lakhraon,+Sarai+Tihait,+Uttar+Pradesh+230503,+India/@26.0289633,81.751467,17z" target="_blank">
+    📍 Google Maps
+  </a>
+
+  <div class="map-card">
+    <h3>📍 हमारी लोकेशन</h3>
+    <iframe
+      src="https://www.google.com/maps?q=26.0289585,81.7540419&z=17&output=embed"
+      loading="lazy">
+    </iframe>
+  </div>
 </section>
 
-<footer>© 2026 कान्हा मेडिकल हॉल | सर्वाधिकार सुरक्षित</footer>
+<footer>
+  © 2026 कान्हा मेडिकल हॉल | सर्वाधिकार सुरक्षित
+</footer>
 
 <script>
   /* COUNTDOWN */
-  const openingDate=new Date("January 1, 2026 09:00:00").getTime();
+  const openingDate=new Date("January 5, 2026 09:00:00").getTime();
   setInterval(()=>{
     const d=openingDate-new Date().getTime();
     if(d<0)return;
@@ -188,8 +335,10 @@
   const c=confettiCanvas,ctx=c.getContext("2d");
   c.width=innerWidth;c.height=innerHeight;
   const conf=Array.from({length:150},()=>({
-    x:Math.random()*c.width,y:Math.random()*c.height-c.height,
-    r:Math.random()*6+4,d:Math.random()*10,
+    x:Math.random()*c.width,
+    y:Math.random()*c.height-c.height,
+    r:Math.random()*6+4,
+    d:Math.random()*10,
     col:`hsl(${Math.random()*360},100%,50%)`
   }));
   (function draw(){
@@ -199,7 +348,8 @@
       ctx.beginPath();
       ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
       ctx.fill();
-      p.y+=p.d;if(p.y>c.height)p.y=-10;
+      p.y+=p.d;
+      if(p.y>c.height)p.y=-10;
     });
     requestAnimationFrame(draw);
   })();
