@@ -232,6 +232,38 @@
     background-color:#000;
   }
     }
+    /* ================= GALLERY ================= */
+.gallery{
+  background:#ffffff;
+  padding:70px 20px;
+}
+
+.gallery-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:25px;
+}
+
+.gallery-item{
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 12px 30px rgba(0,0,0,.12);
+  transition:.3s;
+}
+
+.gallery-item img{
+  width:100%;
+  height:auto;
+  display:block; /* removes gaps */
+}
+
+.gallery-item:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 40px rgba(0,0,0,.18);
+}
+
     
   </style>
 </head>
@@ -291,6 +323,30 @@
   <a href="tel:9621104072">📞 कॉल करें</a>
   <a href="https://wa.me/919621104072" target="_blank">💬 WhatsApp</a>
   <a href="https://www.google.com/maps/place/02,+Lakhraon,+Sarai+Tihait,+Uttar+Pradesh+230503,+India/@26.0289633,81.751467,17z" target="_blank">📍 Google Maps</a>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <h2>🏥 हमारी दुकान की झलक</h2>
+
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img 
+        src="https://ik.imagekit.io/hmqjpocpg/Portfolio/kanha%20Medical/Shop01.jpeg"
+        alt="Kanha Medical Hall Shop Image 1"
+        loading="lazy"
+      />
+    </div>
+
+    <div class="gallery-item">
+      <img 
+        src="https://ik.imagekit.io/hmqjpocpg/Portfolio/kanha%20Medical/Shop02.jpeg"
+        alt="Kanha Medical Hall Shop Image 2"
+        loading="lazy"
+      />
+    </div>
+  </div>
+</section>
+
 
   <div class="map-card">
     <h3>📍 हमारी लोकेशन</h3>
