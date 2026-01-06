@@ -226,10 +226,9 @@
       .owner-info{
         text-align:center;
       }
-       .hero{
-    height:45vh;
-    background-size:contain;
-    background-color:#000;
+     .hero img{
+    max-height:70vh;     /* 👈 screen se zyada lamba nahi */
+    object-fit:contain; /* 👈 no crop, no zoom */
   }
     }
     /* ================= GALLERY ================= */
