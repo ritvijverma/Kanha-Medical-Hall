@@ -262,6 +262,16 @@
   transform:translateY(-6px);
   box-shadow:0 18px 40px rgba(0,0,0,.18);
 }
+/* 🔥 FIX EXTRA SPACE AFTER BANNER */
+.hero + section{
+  padding-top:20px;   /* pehle 60px tha */
+}
+
+@media(max-width:768px){
+  .hero + section{
+    padding-top:10px; /* mobile me aur kam */
+  }
+}
 
     
   </style>
@@ -317,11 +327,11 @@
 
 <!-- CONTACT -->
 <section class="contact">
-  <h2>📍 संपर्क एवं लोकेशन</h2>
+  <!-- <h2>📍 संपर्क एवं लोकेशन</h2> -->
 
-  <a href="tel:9621104072">📞 कॉल करें</a>
-  <a href="https://wa.me/919621104072" target="_blank">💬 WhatsApp</a>
-  <a href="https://www.google.com/maps/place/02,+Lakhraon,+Sarai+Tihait,+Uttar+Pradesh+230503,+India/@26.0289633,81.751467,17z" target="_blank">📍 Google Maps</a>
+  <!-- <a href="tel:9621104072">📞 कॉल करें</a> -->
+  <!-- <a href="https://wa.me/919621104072" target="_blank">💬 WhatsApp</a> -->
+  <!-- <a href="https://www.google.com/maps/place/02,+Lakhraon,+Sarai+Tihait,+Uttar+Pradesh+230503,+India/@26.0289633,81.751467,17z" target="_blank">📍 Google Maps</a> -->
 
 <!-- GALLERY -->
 <section class="gallery">
@@ -349,6 +359,8 @@
 
   <div class="map-card">
     <h3>📍 हमारी लोकेशन</h3>
+      <a href="https://www.google.com/maps/place/02,+Lakhraon,+Sarai+Tihait,+Uttar+Pradesh+230503,+India/@26.0289633,81.751467,17z" target="_blank">📍 Google Maps</a>
+
     <iframe src="https://www.google.com/maps?q=26.0289585,81.7540419&z=17&output=embed" loading="lazy"></iframe>
   </div>
 </section>
