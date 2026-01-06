@@ -273,6 +273,44 @@
   }
 }
 
+/* ================= OFFER ICON LIST ================= */
+.offer-list{
+  max-width:900px;
+  margin:35px auto 0;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap:18px;
+}
+
+.offer-item{
+  background:#ffffff;
+  padding:18px 22px;
+  border-radius:16px;
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  box-shadow:0 8px 22px rgba(0,0,0,.1);
+  text-align:left;
+}
+
+.offer-icon{
+  font-size:1.6rem;
+  line-height:1;
+}
+
+.offer-text{
+  font-size:1rem;
+  color:#444;
+  font-weight:600;
+}
+
+@media(max-width:768px){
+  .offer-item{
+    text-align:left;
+  }
+}
+
+
     
   </style>
 </head>
@@ -290,24 +328,52 @@
 
 <!-- OFFER -->
 <section class="offer">
-<h2>💊 दवाइयाँ एवं विशेष मेडिकल जांच सुविधा</h2>
+  <h2>💊 दवाइयाँ एवं विशेष मेडिकल जांच सुविधा</h2>
 
+  <!-- TESTS -->
   <div class="service-box">
     <div class="card">🩺 BP जांच</div>
     <div class="card">🍬 शुगर जांच</div>
     <div class="card">🧪 CBC ब्लड टेस्ट</div>
     <div class="card">🦋 थायरॉयड टेस्ट</div>
-    <div class="card">🦟 मलेरिया जांच</div>
-    <div class="card">🧫 विडाल टेस्ट</div>
+    <!-- <div class="card">🦟 मलेरिया जांच</div> -->
+    <!-- <div class="card">🧫 विडाल टेस्ट</div> -->
   </div>
 
-  <!-- NEW INFO -->
-  <div class="offer-note">
-    ✔ सभी प्रकार की दवाइयाँ उपलब्ध <br>
-    ✔ सही स्वास्थ्य जांच एवं विश्वसनीय रिपोर्ट <br>
-    ✔ अनुभवी मार्गदर्शन एवं उचित सलाह
+  <!-- MEDICINE & TRUST INFO -->
+  <div class="offer-list">
+    <div class="offer-item">
+      <span class="offer-icon">💊</span>
+      <span class="offer-text">सभी प्रकार की ब्रांडेड एवं जनरल दवाइयाँ उपलब्ध</span>
+    </div>
+
+    <div class="offer-item">
+      <span class="offer-icon">🛡️</span>
+      <span class="offer-text">100% असली एवं भरोसेमंद दवाइयाँ</span>
+    </div>
+
+    <div class="offer-item">
+      <span class="offer-icon">🧾</span>
+      <span class="offer-text">सही स्वास्थ्य जांच एवं विश्वसनीय रिपोर्ट</span>
+    </div>
+
+    <div class="offer-item">
+      <span class="offer-icon">👨‍⚕️</span>
+      <span class="offer-text">अनुभवी मार्गदर्शन एवं उचित सलाह</span>
+    </div>
+
+    <div class="offer-item">
+      <span class="offer-icon">🚑</span>
+      <span class="offer-text">आपातकालीन दवाइयाँ हमेशा उपलब्ध</span>
+    </div>
+
+    <div class="offer-item">
+      <span class="offer-icon">❤️</span>
+      <span class="offer-text">आपकी सेहत, हमारी प्राथमिकता</span>
+    </div>
   </div>
 </section>
+
 
 
 <!-- OWNER DETAIL -->
