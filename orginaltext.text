@@ -6,190 +6,256 @@
   <title>Kanha Medical Hall | Opening Soon</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:"Segoe UI",Arial,sans-serif;
     }
 
-    body {
-      background: #f4fdf7;
-      color: #333;
+    body{
+      background:#f2fbf6;
+      color:#333;
+      line-height:1.6;
     }
 
-    section {
-      padding: 50px 20px;
-      text-align: center;
+    section{
+      padding:60px 20px;
+      text-align:center;
     }
 
-    h2 {
-      margin-bottom: 20px;
-      color: #1e8449;
+    h2{
+      margin-bottom:25px;
+      color:#1e8449;
+      font-size:1.9rem;
     }
 
-    /* HERO */
-    .hero {
-      background: linear-gradient(to right, #2ecc71, #27ae60);
-      color: white;
-      padding: 80px 20px;
-      position: relative;
+    /* ================= HERO ================= */
+    .hero{
+      background:linear-gradient(135deg,#27ae60,#2ecc71);
+      color:#fff;
+      padding:90px 20px;
+      position:relative;
+      overflow:hidden;
     }
 
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+    .hero h1{
+      font-size:2.7rem;
+      margin-bottom:10px;
     }
 
-    .hero p {
-      margin-bottom: 15px;
+    .hero p{
+      font-size:1.1rem;
+      margin-bottom:8px;
     }
 
-    /* LANGUAGE BUTTON */
-    #langBtn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: white;
-      color: #27ae60;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-weight: bold;
-      cursor: pointer;
+    #langBtn{
+      position:absolute;
+      top:20px;
+      right:20px;
+      background:#fff;
+      color:#27ae60;
+      border:none;
+      padding:8px 18px;
+      border-radius:30px;
+      font-weight:bold;
+      cursor:pointer;
+      box-shadow:0 4px 10px rgba(0,0,0,.2);
     }
 
-    /* COUNTDOWN */
-    .countdown {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
+    /* ================= COUNTDOWN ================= */
+    .countdown{
+      display:flex;
+      justify-content:center;
+      gap:15px;
+      flex-wrap:wrap;
+      margin-top:30px;
     }
 
-    .time-box {
-      background: white;
-      color: #27ae60;
-      padding: 15px;
-      border-radius: 10px;
-      min-width: 90px;
+    .time-box{
+      background:#fff;
+      color:#27ae60;
+      padding:18px;
+      border-radius:16px;
+      min-width:95px;
+      box-shadow:0 8px 20px rgba(0,0,0,.15);
     }
 
-    /* LOCATION */
-    .location button {
-      background: #27ae60;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 5px;
-      cursor: pointer;
+    .time-box h3{
+      font-size:1.8rem;
     }
 
-    /* SERVICES */
-    .service-box {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: auto;
+    /* ================= GRID ================= */
+    .service-box{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:22px;
+      max-width:1100px;
+      margin:auto;
     }
 
-    .card {
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    .card{
+      background:#fff;
+      padding:22px;
+      border-radius:18px;
+      box-shadow:0 10px 25px rgba(0,0,0,.1);
+      font-weight:bold;
+      transition:.3s;
     }
 
-    /* CONTACT */
-    .contact {
-      background: #eafaf1;
+    .card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 18px 35px rgba(0,0,0,.15);
     }
 
-    .contact a {
-      display: inline-block;
-      margin: 10px;
-      color: white;
-      background: #27ae60;
-      padding: 10px 18px;
-      border-radius: 5px;
-      text-decoration: none;
+    /* ================= OFFER ================= */
+    .offer{
+      background:linear-gradient(135deg,#fff7e6,#ffffff);
+      border-top:4px dashed #e67e22;
+      border-bottom:4px dashed #e67e22;
     }
 
-    /* FOOTER */
-    footer {
-      background: #1e8449;
-      color: white;
-      padding: 15px;
-      text-align: center;
+    .offer-note{
+      margin-top:25px;
+      background:#ffecec;
+      display:inline-block;
+      padding:12px 26px;
+      border-radius:30px;
+      color:#c0392b;
+      font-weight:bold;
+      box-shadow:0 5px 15px rgba(0,0,0,.1);
     }
 
-    /* WELCOME POPUP */
-    #welcomePopup {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: white;
-      padding: 30px 40px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-      z-index: 9999;
-      animation: popIn 0.8s ease;
+    /* ================= CONTACT ================= */
+    .contact{
+      background:#eafaf1;
     }
 
-    #welcomePopup h2 {
-      color: #27ae60;
-      margin-bottom: 10px;
+    .owner-box{
+      background:linear-gradient(135deg,#ffffff,#f3fff8);
+      display:inline-block;
+      padding:18px 35px;
+      border-radius:18px;
+      box-shadow:0 8px 20px rgba(0,0,0,.12);
+      margin-bottom:25px;
+      border-left:6px solid #27ae60;
     }
 
-    @keyframes popIn {
-      from { transform: translate(-50%, -60%) scale(0.5); opacity: 0; }
-      to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    .contact a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin:10px;
+      background:linear-gradient(135deg,#27ae60,#2ecc71);
+      color:#fff;
+      padding:14px 26px;
+      border-radius:35px;
+      font-weight:bold;
+      text-decoration:none;
+      box-shadow:0 6px 18px rgba(39,174,96,.35);
+      transition:.3s;
     }
 
-    #confettiCanvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 9998;
+    .contact a:hover{
+      transform:translateY(-4px) scale(1.04);
+      box-shadow:0 12px 28px rgba(39,174,96,.5);
     }
 
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 2rem; }
+    /* ================= MAP ================= */
+    .map-card{
+      max-width:1100px;
+      margin:40px auto 0;
+      background:#fff;
+      border-radius:20px;
+      box-shadow:0 12px 35px rgba(0,0,0,.15);
+      overflow:hidden;
+    }
+
+    .map-card h3{
+      background:linear-gradient(to right,#27ae60,#2ecc71);
+      color:#fff;
+      padding:18px;
+      text-align:center;
+      font-size:1.3rem;
+    }
+
+    .map-card iframe{
+      width:100%;
+      height:340px;
+      border:0;
+    }
+
+    /* ================= FOOTER ================= */
+    footer{
+      background:#1e8449;
+      color:#fff;
+      padding:18px;
+      text-align:center;
+      font-size:.95rem;
+    }
+
+    /* ================= POPUP ================= */
+    #welcomePopup{
+      position:fixed;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      background:#fff;
+      padding:35px 45px;
+      border-radius:20px;
+      text-align:center;
+      box-shadow:0 15px 45px rgba(0,0,0,.35);
+      z-index:9999;
+      animation:popIn .8s ease;
+    }
+
+    #welcomePopup h2{
+      color:#27ae60;
+      margin-bottom:12px;
+    }
+
+    @keyframes popIn{
+      from{transform:translate(-50%,-60%) scale(.5);opacity:0}
+      to{transform:translate(-50%,-50%) scale(1);opacity:1}
+    }
+
+    #confettiCanvas{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      pointer-events:none;
+      z-index:9998;
+    }
+
+    @media(max-width:600px){
+      .hero h1{font-size:2.1rem}
     }
   </style>
 </head>
 
 <body>
 
-<!-- 🎉 WELCOME POPUP (DEFAULT HINDI) -->
+<!-- POPUP -->
 <div id="welcomePopup">
-  <h2 id="welcomeTitle">🎉 स्वागत है 🎉</h2>
-  <p><strong id="welcomeName">कान्हा मेडिकल हॉल</strong></p>
-
-  <p id="welcomeMsg" style="margin:10px 0; color:#27ae60; font-weight:bold;">
-    5 जनवरी को हमारे<br/>
-    <span style="color:#c0392b;">भव्य उद्घाटन समारोह 🎊</span><br/>
+  <h2>🎉 स्वागत है 🎉</h2>
+  <p><strong>कान्हा मेडिकल हॉल</strong></p>
+  <p style="margin:12px 0;color:#27ae60;font-weight:bold">
+    5 जनवरी को हमारे<br>
+    <span style="color:#c0392b">भव्य उद्घाटन समारोह 🎊</span><br>
     में आपका हार्दिक स्वागत है
   </p>
-
-  <small id="welcomeTagline">आपकी भरोसेमंद मेडिकल दुकान</small>
+  <small>आपकी भरोसेमंद मेडिकल दुकान</small>
 </div>
-
 <canvas id="confettiCanvas"></canvas>
 
 <!-- HERO -->
 <section class="hero">
-  <button id="langBtn" onclick="toggleLanguage()">English</button>
-
-  <h1 id="pharmacyName">कान्हा मेडिकल हॉल</h1>
-  <p id="tagline">आपकी भरोसेमंद मेडिकल दुकान</p>
-  <p><strong id="openingText">उद्घाटन तिथि: 01 जनवरी 2026</strong></p>
+  <!-- <button id="langBtn">English</button> -->
+  <h1>कान्हा मेडिकल हॉल</h1>
+  <p>आपकी भरोसेमंद मेडिकल दुकान</p>
+  <p><strong>उद्घाटन तिथि: 05 जनवरी 2026</strong></p>
 
   <div class="countdown">
     <div class="time-box"><h3 id="days">0</h3><span>दिन</span></div>
@@ -199,18 +265,23 @@
   </div>
 </section>
 
-<!-- LOCATION -->
-<section class="location">
-  <h2 id="locationTitle">📍 हमारा स्थान</h2>
-<p id="addressText">
-लखराव, खजूरी, किशुन गंज, खजूरी, प्रतापगढ़, उत्तर प्रदेश – 230503
-</p>
-  <button onclick="openMap()">दिशा प्राप्त करें</button>
+<!-- OFFER -->
+<section class="offer">
+  <h2>🎉 उद्घाटन दिवस विशेष मेडिकल कैंप 🎉</h2>
+  <div class="service-box">
+    <div class="card">🩺 BP जांच – निःशुल्क</div>
+    <div class="card">🍬 शुगर जांच – निःशुल्क</div>
+    <div class="card">🦟 मलेरिया जांच</div>
+    <div class="card">🧪 CBC ब्लड टेस्ट – ₹125</div>
+    <div class="card">🧫 विडाल टेस्ट – ₹50</div>
+    <div class="card">🦋 थायरॉयड टेस्ट – ₹200</div>
+  </div>
+  <div class="offer-note">⚠️ यह सुविधा केवल उद्घाटन दिवस पर ही उपलब्ध है</div>
 </section>
 
-<!-- SERVICES -->
+<!-- FACILITIES -->
 <section>
-  <h2 id="serviceTitle">💊 हमारी सुविधाएँ</h2>
+  <h2>💊 हमारी सुविधाएँ</h2>
   <div class="service-box">
     <div class="card">सभी प्रकार की दवाइयाँ उपलब्ध</div>
     <div class="card">प्रिस्क्रिप्शन दवाइयाँ</div>
@@ -223,98 +294,72 @@
 
 <!-- CONTACT -->
 <section class="contact">
-  <h2 id="contactTitle">📞 संपर्क करें</h2>
-  <p>फोन: 9621104072</p>
-  <a href="tel:9621104072">कॉल करें</a>
-  <a href="https://wa.me/919621104072" target="_blank">WhatsApp</a>
+  <h2>📞 संपर्क करें</h2>
+  <div class="owner-box">
+    <p><strong>मालिक:</strong> नीरज यादव</p>
+    <p><strong>मोबाइल:</strong> 9621104072</p>
+  </div><br>
+
+  <a href="tel:9621104072">📞 कॉल करें</a>
+  <a href="https://wa.me/919621104072" target="_blank">💬 WhatsApp</a>
+  <a href="https://www.google.com/maps/place/02,+Lakhraon,+Sarai+Tihait,+Uttar+Pradesh+230503,+India/@26.0289633,81.751467,17z" target="_blank">
+    📍 Google Maps
+  </a>
+
+  <div class="map-card">
+    <h3>📍 हमारी लोकेशन</h3>
+    <iframe
+      src="https://www.google.com/maps?q=26.0289585,81.7540419&z=17&output=embed"
+      loading="lazy">
+    </iframe>
+  </div>
 </section>
 
-<footer id="footerText">
+<footer>
   © 2026 कान्हा मेडिकल हॉल | सर्वाधिकार सुरक्षित
 </footer>
 
-<!-- JS -->
 <script>
   /* COUNTDOWN */
-  const openingDate = new Date("January 1, 2026 09:00:00").getTime();
-  setInterval(() => {
-    const d = openingDate - new Date().getTime();
-    if (d < 0) return;
-    days.innerText = Math.floor(d / 86400000);
-    hours.innerText = Math.floor((d % 86400000) / 3600000);
-    minutes.innerText = Math.floor((d % 3600000) / 60000);
-    seconds.innerText = Math.floor((d % 60000) / 1000);
-  }, 1000);
-
-  function openMap() {
-    window.open("https://www.google.com/maps?q=Main+Road+Near+City+Hospital");
-  }
-
-  /* LANGUAGE TOGGLE */
-  let isHindi = true;
-
-  function toggleLanguage() {
-    isHindi = !isHindi;
-
-    langBtn.innerText = isHindi ? "English" : "हिंदी";
-
-    pharmacyName.innerText = isHindi ? "कान्हा मेडिकल हॉल" : "Kanha Medical Hall";
-    tagline.innerText = isHindi ? "आपकी भरोसेमंद मेडिकल दुकान" : "Your Trusted Neighborhood Pharmacy";
-    openingText.innerText = isHindi ? "उद्घाटन तिथि: 01 जनवरी 2026" : "Opening On: 01 January 2026";
-
-    locationTitle.innerText = isHindi ? "📍 हमारा स्थान" : "📍 Our Location";
-  addressText.innerText = isHindi
-  ? "लखराव, खजूरी, किशुन गंज, खजूरी, प्रतापगढ़, उत्तर प्रदेश – 230503"
-  : "Lakhrav, Khajuri, Kishun Ganj, Khajuri, Pratapgarh, Uttar Pradesh 230503";
-
-
-    serviceTitle.innerText = isHindi ? "💊 हमारी सुविधाएँ" : "💊 Our Facilities";
-    contactTitle.innerText = isHindi ? "📞 संपर्क करें" : "📞 Enquiry & Contact";
-
-    footerText.innerText = isHindi
-      ? "© 2026 कान्हा मेडिकल हॉल | सर्वाधिकार सुरक्षित"
-      : "© 2026 Kanha Medical Hall | All Rights Reserved";
-
-    /* WELCOME POPUP TEXT */
-    welcomeTitle.innerText = isHindi ? "🎉 स्वागत है 🎉" : "🎉 Welcome 🎉";
-    welcomeName.innerText = isHindi ? "कान्हा मेडिकल हॉल" : "Kanha Medical Hall";
-    welcomeMsg.innerHTML = isHindi
-      ? `5 जनवरी को हमारे<br/><span style="color:#c0392b;">भव्य उद्घाटन समारोह 🎊</span><br/>में आपका हार्दिक स्वागत है`
-      : `You are invited on <span style="color:#e67e22;">5 January</span><br/>for our <span style="color:#c0392b;">Grand Opening 🎊</span>`;
-    welcomeTagline.innerText = isHindi
-      ? "आपकी भरोसेमंद मेडिकल दुकान"
-      : "Your Trusted Neighborhood Pharmacy";
-  }
+  const openingDate=new Date("January 5, 2026 09:00:00").getTime();
+  setInterval(()=>{
+    const d=openingDate-new Date().getTime();
+    if(d<0)return;
+    days.innerText=Math.floor(d/86400000);
+    hours.innerText=Math.floor((d%86400000)/3600000);
+    minutes.innerText=Math.floor((d%3600000)/60000);
+    seconds.innerText=Math.floor((d%60000)/1000);
+  },1000);
 
   /* CONFETTI */
-  const canvas = confettiCanvas, ctx = canvas.getContext("2d");
-  canvas.width = innerWidth; canvas.height = innerHeight;
-  const confetti = Array.from({ length: 150 }, () => ({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height - canvas.height,
-    r: Math.random() * 6 + 4,
-    d: Math.random() * 10,
-    c: `hsl(${Math.random() * 360},100%,50%)`
+  const c=confettiCanvas,ctx=c.getContext("2d");
+  c.width=innerWidth;c.height=innerHeight;
+  const conf=Array.from({length:150},()=>({
+    x:Math.random()*c.width,
+    y:Math.random()*c.height-c.height,
+    r:Math.random()*6+4,
+    d:Math.random()*10,
+    col:`hsl(${Math.random()*360},100%,50%)`
   }));
-
-  (function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    confetti.forEach(p => {
-      ctx.fillStyle = p.c;
+  (function draw(){
+    ctx.clearRect(0,0,c.width,c.height);
+    conf.forEach(p=>{
+      ctx.fillStyle=p.col;
       ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
       ctx.fill();
-      p.y += p.d;
-      if (p.y > canvas.height) p.y = -10;
+      p.y+=p.d;
+      if(p.y>c.height)p.y=-10;
     });
     requestAnimationFrame(draw);
   })();
 
-  setTimeout(() => {
-    welcomePopup.style.display = "none";
-    confettiCanvas.style.display = "none";
-  }, 8000);
+  setTimeout(()=>{
+    welcomePopup.style.display="none";
+    confettiCanvas.style.display="none";
+  },8000);
 </script>
 
 </body>
 </html>
+  

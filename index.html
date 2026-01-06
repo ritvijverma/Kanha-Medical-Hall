@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kanha Medical Hall | Opening Soon</title>
+  <title>Kanha Medical Hall | Trusted Medical Store</title>
 
   <style>
     *{
@@ -30,60 +30,19 @@
       font-size:1.9rem;
     }
 
-    /* ================= HERO ================= */
-    .hero{
-      background:linear-gradient(135deg,#27ae60,#2ecc71);
-      color:#fff;
-      padding:90px 20px;
-      position:relative;
-      overflow:hidden;
-    }
+    /* ================= BANNER / HERO ================= */
+/* ================= BANNER / HERO ================= */
+.hero{
+  width:100%;
+}
 
-    .hero h1{
-      font-size:2.7rem;
-      margin-bottom:10px;
-    }
+.hero img{
+  width:100%;
+  height:auto;        /* 👈 natural height */
+  display:block;     /* 👈 removes white gaps */
+}
 
-    .hero p{
-      font-size:1.1rem;
-      margin-bottom:8px;
-    }
 
-    #langBtn{
-      position:absolute;
-      top:20px;
-      right:20px;
-      background:#fff;
-      color:#27ae60;
-      border:none;
-      padding:8px 18px;
-      border-radius:30px;
-      font-weight:bold;
-      cursor:pointer;
-      box-shadow:0 4px 10px rgba(0,0,0,.2);
-    }
-
-    /* ================= COUNTDOWN ================= */
-    .countdown{
-      display:flex;
-      justify-content:center;
-      gap:15px;
-      flex-wrap:wrap;
-      margin-top:30px;
-    }
-
-    .time-box{
-      background:#fff;
-      color:#27ae60;
-      padding:18px;
-      border-radius:16px;
-      min-width:95px;
-      box-shadow:0 8px 20px rgba(0,0,0,.15);
-    }
-
-    .time-box h3{
-      font-size:1.8rem;
-    }
 
     /* ================= GRID ================= */
     .service-box{
@@ -126,19 +85,82 @@
       box-shadow:0 5px 15px rgba(0,0,0,.1);
     }
 
+    /* ================= OWNER SECTION ================= */
+    .owner-section{
+      background:linear-gradient(135deg,#f8fff9,#ffffff);
+      padding:70px 20px;
+    }
+
+    .owner-card{
+      max-width:900px;
+      margin:auto;
+      display:flex;
+      gap:40px;
+      align-items:center;
+      background:#fff;
+      padding:35px;
+      border-radius:22px;
+      box-shadow:0 15px 40px rgba(0,0,0,.12);
+      border-left:8px solid #27ae60;
+    }
+
+    .owner-img img{
+      width:220px;
+      height:220px;
+      object-fit:cover;
+      border-radius:50%;
+      border:6px solid #eafaf1;
+      box-shadow:0 10px 25px rgba(0,0,0,.15);
+    }
+
+    .owner-info{
+      text-align:left;
+    }
+
+    .owner-info h3{
+      font-size:1.8rem;
+      color:#1e8449;
+      margin-bottom:6px;
+    }
+
+    .owner-info .role{
+      font-weight:bold;
+      color:#555;
+      margin-bottom:18px;
+    }
+
+    .owner-actions{
+      display:flex;
+      gap:15px;
+      margin-bottom:18px;
+      flex-wrap:wrap;
+    }
+
+    .owner-actions a{
+      padding:12px 24px;
+      border-radius:30px;
+      font-weight:bold;
+      text-decoration:none;
+      color:#fff;
+      transition:.3s;
+    }
+
+    .call-btn{ background:#27ae60; }
+    .wa-btn{ background:#25d366; }
+
+    .owner-actions a:hover{
+      transform:translateY(-3px);
+      box-shadow:0 8px 20px rgba(0,0,0,.2);
+    }
+
+    .trust-note{
+      color:#777;
+      font-size:.95rem;
+    }
+
     /* ================= CONTACT ================= */
     .contact{
       background:#eafaf1;
-    }
-
-    .owner-box{
-      background:linear-gradient(135deg,#ffffff,#f3fff8);
-      display:inline-block;
-      padding:18px 35px;
-      border-radius:18px;
-      box-shadow:0 8px 20px rgba(0,0,0,.12);
-      margin-bottom:25px;
-      border-left:6px solid #27ae60;
     }
 
     .contact a{
@@ -185,7 +207,6 @@
       border:0;
     }
 
-    /* ================= FOOTER ================= */
     footer{
       background:#1e8449;
       color:#fff;
@@ -194,171 +215,92 @@
       font-size:.95rem;
     }
 
-    /* ================= POPUP ================= */
-    #welcomePopup{
-      position:fixed;
-      top:50%;
-      left:50%;
-      transform:translate(-50%,-50%);
-      background:#fff;
-      padding:35px 45px;
-      border-radius:20px;
-      text-align:center;
-      box-shadow:0 15px 45px rgba(0,0,0,.35);
-      z-index:9999;
-      animation:popIn .8s ease;
-    }
+    @media(max-width:768px){
+      .hero h1{ font-size:2.2rem; }
+      .hero p{ font-size:1rem; }
 
-    #welcomePopup h2{
-      color:#27ae60;
-      margin-bottom:12px;
+      .owner-card{
+        flex-direction:column;
+        text-align:center;
+      }
+      .owner-info{
+        text-align:center;
+      }
+       .hero{
+    height:45vh;
+    background-size:contain;
+    background-color:#000;
+  }
     }
-
-    @keyframes popIn{
-      from{transform:translate(-50%,-60%) scale(.5);opacity:0}
-      to{transform:translate(-50%,-50%) scale(1);opacity:1}
-    }
-
-    #confettiCanvas{
-      position:fixed;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      pointer-events:none;
-      z-index:9998;
-    }
-
-    @media(max-width:600px){
-      .hero h1{font-size:2.1rem}
-    }
+    
   </style>
 </head>
 
 <body>
 
-<!-- POPUP -->
-<div id="welcomePopup">
-  <h2>🎉 स्वागत है 🎉</h2>
-  <p><strong>कान्हा मेडिकल हॉल</strong></p>
-  <p style="margin:12px 0;color:#27ae60;font-weight:bold">
-    5 जनवरी को हमारे<br>
-    <span style="color:#c0392b">भव्य उद्घाटन समारोह 🎊</span><br>
-    में आपका हार्दिक स्वागत है
-  </p>
-  <small>आपकी भरोसेमंद मेडिकल दुकान</small>
-</div>
-<canvas id="confettiCanvas"></canvas>
-
-<!-- HERO -->
+<!-- HERO WITH BANNER -->
 <section class="hero">
-  <!-- <button id="langBtn">English</button> -->
-  <h1>कान्हा मेडिकल हॉल</h1>
-  <p>आपकी भरोसेमंद मेडिकल दुकान</p>
-  <p><strong>उद्घाटन तिथि: 05 जनवरी 2026</strong></p>
-
-  <div class="countdown">
-    <div class="time-box"><h3 id="days">0</h3><span>दिन</span></div>
-    <div class="time-box"><h3 id="hours">0</h3><span>घंटे</span></div>
-    <div class="time-box"><h3 id="minutes">0</h3><span>मिनट</span></div>
-    <div class="time-box"><h3 id="seconds">0</h3><span>सेकंड</span></div>
-  </div>
+  <img 
+    src="https://ik.imagekit.io/hmqjpocpg/Portfolio/kanha%20Medical/Banner.jpeg"
+    alt="Kanha Medical Hall Banner"
+  />
 </section>
+
 
 <!-- OFFER -->
 <section class="offer">
-  <h2>🎉 उद्घाटन दिवस विशेष मेडिकल कैंप 🎉</h2>
+  <h2>💊 विशेष मेडिकल जांच सुविधा</h2>
   <div class="service-box">
-    <div class="card">🩺 BP जांच – निःशुल्क</div>
-    <div class="card">🍬 शुगर जांच – निःशुल्क</div>
+    <div class="card">🩺 BP जांच</div>
+    <div class="card">🍬 शुगर जांच</div>
+    <div class="card">🧪 CBC ब्लड टेस्ट</div>
+    <div class="card">🦋 थायरॉयड टेस्ट</div>
     <div class="card">🦟 मलेरिया जांच</div>
-    <div class="card">🧪 CBC ब्लड टेस्ट – ₹125</div>
-    <div class="card">🧫 विडाल टेस्ट – ₹50</div>
-    <div class="card">🦋 थायरॉयड टेस्ट – ₹200</div>
+    <div class="card">🧫 विडाल टेस्ट</div>
   </div>
-  <div class="offer-note">⚠️ यह सुविधा केवल उद्घाटन दिवस पर ही उपलब्ध है</div>
+  <div class="offer-note">✔ सही जांच • ✔ सही रिपोर्ट • ✔ सही सलाह</div>
 </section>
 
-<!-- FACILITIES -->
-<section>
-  <h2>💊 हमारी सुविधाएँ</h2>
-  <div class="service-box">
-    <div class="card">सभी प्रकार की दवाइयाँ उपलब्ध</div>
-    <div class="card">प्रिस्क्रिप्शन दवाइयाँ</div>
-    <div class="card">बीपी एवं शुगर जांच</div>
-    <div class="card">आपातकालीन दवाइयाँ</div>
-    <div class="card">होम डिलीवरी (जल्द आ रही है)</div>
-    <div class="card">विश्वसनीय एवं असली उत्पाद</div>
+<!-- OWNER DETAIL -->
+<section class="owner-section">
+  <h2>👨‍⚕️ दुकान के मालिक</h2>
+
+  <div class="owner-card">
+    <div class="owner-img">
+      <img src="https://ik.imagekit.io/hmqjpocpg/Portfolio/kanha%20Medical/NeerajImg.jpeg" alt="Neeraj Yadav">
+    </div>
+
+    <div class="owner-info">
+      <h3>नीरज यादव</h3>
+      <p class="role">Founder & Owner – Kanha Medical Hall</p>
+
+      <div class="owner-actions">
+        <a href="tel:9621104072" class="call-btn">📞 कॉल करें</a>
+        <a href="https://wa.me/919621104072" target="_blank" class="wa-btn">💬 WhatsApp</a>
+      </div>
+
+      <p class="trust-note">💊 भरोसेमंद दवाइयाँ • सही सलाह • उचित मूल्य</p>
+    </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section class="contact">
-  <h2>📞 संपर्क करें</h2>
-  <div class="owner-box">
-    <p><strong>मालिक:</strong> नीरज यादव</p>
-    <p><strong>मोबाइल:</strong> 9621104072</p>
-  </div><br>
+  <h2>📍 संपर्क एवं लोकेशन</h2>
 
   <a href="tel:9621104072">📞 कॉल करें</a>
   <a href="https://wa.me/919621104072" target="_blank">💬 WhatsApp</a>
-  <a href="https://www.google.com/maps/place/02,+Lakhraon,+Sarai+Tihait,+Uttar+Pradesh+230503,+India/@26.0289633,81.751467,17z" target="_blank">
-    📍 Google Maps
-  </a>
+  <a href="https://www.google.com/maps/place/02,+Lakhraon,+Sarai+Tihait,+Uttar+Pradesh+230503,+India/@26.0289633,81.751467,17z" target="_blank">📍 Google Maps</a>
 
   <div class="map-card">
     <h3>📍 हमारी लोकेशन</h3>
-    <iframe
-      src="https://www.google.com/maps?q=26.0289585,81.7540419&z=17&output=embed"
-      loading="lazy">
-    </iframe>
+    <iframe src="https://www.google.com/maps?q=26.0289585,81.7540419&z=17&output=embed" loading="lazy"></iframe>
   </div>
 </section>
 
 <footer>
   © 2026 कान्हा मेडिकल हॉल | सर्वाधिकार सुरक्षित
 </footer>
-
-<script>
-  /* COUNTDOWN */
-  const openingDate=new Date("January 5, 2026 09:00:00").getTime();
-  setInterval(()=>{
-    const d=openingDate-new Date().getTime();
-    if(d<0)return;
-    days.innerText=Math.floor(d/86400000);
-    hours.innerText=Math.floor((d%86400000)/3600000);
-    minutes.innerText=Math.floor((d%3600000)/60000);
-    seconds.innerText=Math.floor((d%60000)/1000);
-  },1000);
-
-  /* CONFETTI */
-  const c=confettiCanvas,ctx=c.getContext("2d");
-  c.width=innerWidth;c.height=innerHeight;
-  const conf=Array.from({length:150},()=>({
-    x:Math.random()*c.width,
-    y:Math.random()*c.height-c.height,
-    r:Math.random()*6+4,
-    d:Math.random()*10,
-    col:`hsl(${Math.random()*360},100%,50%)`
-  }));
-  (function draw(){
-    ctx.clearRect(0,0,c.width,c.height);
-    conf.forEach(p=>{
-      ctx.fillStyle=p.col;
-      ctx.beginPath();
-      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fill();
-      p.y+=p.d;
-      if(p.y>c.height)p.y=-10;
-    });
-    requestAnimationFrame(draw);
-  })();
-
-  setTimeout(()=>{
-    welcomePopup.style.display="none";
-    confettiCanvas.style.display="none";
-  },8000);
-</script>
 
 </body>
 </html>
